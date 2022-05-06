@@ -11,6 +11,7 @@ import {
 import { theme } from '../../theme';
 import { styles } from './styles';
 
+import { ScreenshotButton } from '../ScreenshotButton';
 import { FeedbackType } from '../Widget';
 import { feedbackTypes } from '../../utils/feedbackTypes';
 
@@ -51,8 +52,17 @@ export function Form({feedbackType} : Props) {
                 multiline
                 style={styles.input}
                 placeholder="Algo não está funcionando?"
+                placeholderTextColor={theme.colors.text_secondary}
             />
         
+            <View style={styles.footer}>
+                <ScreenshotButton 
+                    onTakeShot={() => {}}
+                    onRemoveShot={() => {}}
+                    screenshot=""
+                />
+            </View>
+            
         </View>
         );
     }
