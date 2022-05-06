@@ -14,6 +14,8 @@ import { styles } from './styles';
 import { ScreenshotButton } from '../ScreenshotButton';
 import { FeedbackType } from '../Widget';
 import { feedbackTypes } from '../../utils/feedbackTypes';
+import { Button } from '../Button/indes';
+import { Copyright } from '../Copyright';
 
 interface Props {
     feedbackType: FeedbackType
@@ -59,10 +61,15 @@ export function Form({feedbackType} : Props) {
                 <ScreenshotButton 
                     onTakeShot={() => {}}
                     onRemoveShot={() => {}}
-                    screenshot=""
+                    screenshot="https://github.com/luanmcosta.png"
                 />
+
+                <Button isLoading={false} />
+
+                
             </View>
             
+            <Copyright />
         </View>
         );
     }

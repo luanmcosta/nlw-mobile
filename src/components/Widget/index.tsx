@@ -10,6 +10,7 @@ import { gestureHandlerRootHOC } from 'react-native-gesture-handler'
 
 import { Options } from '../Options';
 import { Form } from '../Form';
+import { Success } from '../Success';
 
 import { feedbackTypes } from '../../utils/feedbackTypes';
 
@@ -42,12 +43,12 @@ function Widget() {
         backgroundStyle={styles.modal}
         handleIndicatorStyle={styles.indicator}
       >
-        <Form feedbackType="OTHER" />
+        <Options />
+        
       </BottomSheet>
 
     </>
   );
 }
-
 
 export default gestureHandlerRootHOC(Widget);
